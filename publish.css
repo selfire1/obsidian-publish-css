@@ -60,7 +60,7 @@ Minimal Styling
   Scroll bars
 
 
-----------------------------------------------------------------
+----------------------------------------------------------------*/
 
 :root {
 
@@ -68,29 +68,7 @@ Minimal Styling
 
   Colors
 
-  Most colors in this theme are driven from the following values,
-  meaning that the backgrounds, borders, and various shades are
-  automatically generated for you.
-
-  - Base color is used for the backgrounds, text and borders.
-  - Accent color is used for links and some interactive elements.
-
-  The colors use HSL (hue, saturation, lightness)
-
-  - Hue (0-360 degrees):0 is red, 120 is green, and 240 is blue
-  - Saturation (0-100%):0% is desaturated, 100% is full saturation
-  - Lightness (0-100%):0% is black, 100% is white
-
   */
-
-  --base-h:0;       /* Base hue */
-  --base-s:0%;      /* Base saturation */
-  --base-d:16%;     /* Base lightness Dark Mode  - 0 is black */
-  --base-l:97%;     /* Base lightness Light Mode  - 100 is white */
-  --accent-h:157;   /* Accent hue */
-  --accent-s:36%;   /* Accent saturation */
-  --accent-d:47%;   /* Accent lightness Dark Mode */
-  --accent-l:46%;   /* Accent lightness Light Mode */
 
   /*----------------------------------------------------------------
 

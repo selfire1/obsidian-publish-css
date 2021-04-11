@@ -163,8 +163,7 @@ h1,h2,h3,h4,h5 {font-family: var(--font-header);}
 /* Headers */
 
 .view-header-title,
-.file-embed-title,
-.markdown-embed-title {
+.file-embed-title {
   text-align:left;
   font-size:1.125em;
   font-weight:var(--bold-weight);
@@ -172,17 +171,17 @@ h1,h2,h3,h4,h5 {font-family: var(--font-header);}
 
 .markdown-preview-view h1 {
   font-size:var(--h1);
-  line-height:1.3;
+  /* line-height:1.3; */
 }
 .markdown-preview-view h2 {
   font-size:var(--h2);
-  line-height:0.9444444444rem;
+  /* line-height:0.9444444444rem; */
   padding-top: 1.3rem;
 }
 .markdown-preview-view h3 {
   font-weight:500;
   font-size:var(--h3);
-  line-height:1.4;
+  /* line-height:1.4; */
   padding-top: 1.15rem;
 }
 .markdown-preview-view h4 {
@@ -301,8 +300,7 @@ span.cm-hashtag.cm-hashtag-end {
   padding:0 calc(var(--nested-padding) / 2) 0 var(--nested-padding);
 }
 .markdown-embed-title {
-  line-height:18px;
-  height:24px;
+  display: none;
 }
 .markdown-embed .markdown-preview-sizer:first-child ul {
   margin-block-start:2px;
@@ -897,6 +895,7 @@ a[href*="obsidian://search"] {
 }
 
 /* Bible Verses */
+/* Viewing them */
 .markdown-preview-view h6 {
   position: relative;
   left: -5%;
@@ -912,7 +911,7 @@ a[href*="obsidian://search"] {
   color: var(--text-faint);
 }
 
-
+/* Embedding */
 div.markdown-embed .markdown-preview-view h6 {
     position: absolute;
     left: 10px;
@@ -925,7 +924,7 @@ div.markdown-embed .markdown-preview-view h6 {
     top: 10px;
 }
 
-div.markdown-embed-link {
+div.markdown-embed-link:not([src*="#v^"]) {
     visibility: hidden;
 }
 
@@ -1135,4 +1134,9 @@ left: -0.15em;
 /* Backlinks */
 .published-container .backlinks {
  border: 1px solid var(--text-accent-hover);
+}
+
+/* Footer */
+.site-footer {
+    display: none;
 }

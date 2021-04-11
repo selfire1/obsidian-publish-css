@@ -1,3 +1,7 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+</style>
+
 /*
 
 Obsidian Publish for THE X
@@ -77,18 +81,10 @@ Minimal Styling
   /* Preview mode */
 
   --text:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-
-  /* Editor mode */
-
-  --text-editor:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-
+  --
   /* Code */
 
   --font-monospace:Menlo,SFMono-Regular,Consolas,"Roboto Mono",monospace;
-
-  /* UI */
-
-  --font-ui:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 
   /* Sizes, weights, padding */
 

@@ -535,25 +535,6 @@ input.prompt-input:hover {
   border-radius:0;
 }
 
-/* Embedded Searches */
-
-.markdown-preview-view .internal-query.is-embed {
-  border-top:none;
-  border-bottom:none;
-}
-.markdown-preview-view .internal-query.is-embed .internal-query-header {
-  justify-content:start;
-}
-.markdown-preview-view .internal-query.is-embed .internal-query-header-title {
-  font-weight:500;
-  color:var(--text-normal);
-  font-size:var(--h2);
-}
-.internal-query.is-embed .search-result-file-matches {
-  border-bottom:0;
-}
-
-
 /* --------------- */
 /* Internal search */
 
@@ -1149,142 +1130,6 @@ input.search-input:focus {
 }
 
 /* --------------- */
-/* Backlink pane */
-
-.backlink-pane {
-  padding-bottom:30px;
-}
-.backlink-pane .search-result-container {
-  padding:5px 5px 5px 5px;
-  margin-left:0;
-}
-.backlink-pane .search-result-file-title {
-  padding-left:15px;
-}
-.backlink-pane > .tree-item-self .collapse-icon {
-  display:none;
-}
-.backlink-pane > .tree-item-self:hover,
-.backlink-pane > .tree-item-self {
-  padding-left:15px;
-  color:var(--text-muted);
-  text-transform:uppercase;
-  letter-spacing:0.05em;
-  font-size:var(--font-smallest);
-  font-weight:500;
-  padding:5px 7px 5px 10px;
-  background:transparent;
-}
-.backlink-pane > .tree-item-self.is-collapsed {
-  color:var(--text-faint);
-}
-
-/* --------------- */
-/* Tag pane */
-
-.tag-container {
-  padding-left:15px;
-}
-.tag-pane-tag-count {
-  padding:0;
-  color:var(--text-faint);
-}
-.pane-list-item-ending-flair {
-  background:transparent;
-}
-.tag-pane-tag {
-  padding:2px 5px 2px 5px;
-  cursor:var(--cursor);
-}
-.tag-pane-tag:hover {
-  background:transparent;
-}
-.nav-file.is-active .nav-file-title:hover {
-  background:var(--background-tertiary) !important;
-}
-.nav-file.is-active > .nav-file-title {
-  background:var(--background-tertiary);
-}
-
-/* --------------- */
-/* Status bar */
-
-.status-bar {
-  background-color:var(--background-secondary);
-  color:var(--text-muted);
-  font-size:var(--font-smaller);
-  border-width:var(--border-width-alt);
-  padding:0 5px 0;
-}
-.status-bar-item {
-  padding:0 5px;
-}
-.status-bar-item-segment {
-  margin-right:10px;
-}
-
-/* --------------- */
-/* Default ribbon sidedock icons */
-
-.workspace-ribbon.mod-left .workspace-ribbon-collapse-btn {
-  opacity:1;
-  height:60px;
-  position:fixed;
-  width:30px;
-  top:auto;
-  bottom:0;
-  z-index:9;
-}
-.workspace-ribbon.mod-right {
-  opacity:1;
-  height:60px;
-  position:fixed;
-  width:30px;
-  top:auto;
-  bottom:0;
-  z-index:9;
-}
-.workspace-ribbon-collapse-btn {
-  margin:0;
-  padding-top:8px;
-}
-.workspace-ribbon-collapse-btn,
-.view-action,
-.side-dock-ribbon-tab,
-.side-dock-ribbon-action {
-  cursor:var(--cursor);
-}
-.workspace-ribbon {
-  border-width:var(--border-width-alt);
-  border-color:var(--background-modifier-border);
-  background:var(--background-secondary);
-}
-.workspace-ribbon.mod-right {
-  right:0;
-  position:absolute;
-  background:transparent;
-  border-right:0;
-}
-.mod-right:not(.is-collapsed) ~ .workspace-split.mod-right-split {
-  margin-right:0;
-}
-.side-dock-ribbon-action {
-  padding:6px 0;
-}
-.side-dock-settings {
-  padding-bottom:20px;
-}
-.side-dock-ribbon {
-  border-left:0;
-}
-body.hider-frameless:not(.hider-ribbon) .side-dock-actions {
-  padding-top:24px;
-}
-body:not(.hider-ribbon) .side-dock-ribbon-action {
-  padding:6px 0 0 0;
-}
-
-/* --------------- */
 /* Preview mode  */
 
 .markdown-preview-view hr {
@@ -1338,36 +1183,6 @@ iframe {
   transition:background-color 0.3s ease;
   background-color:var(--text-selection);
   color:inherit;
-}
-
-/* Metadata */
-
-.frontmatter-collapse-indicator.collapse-indicator {
-  display:none;
-}
-.frontmatter-container .tag {
-  font-size:var(--font-smaller);
-}
-.frontmatter-container .frontmatter-alias {
-  color:var(--text-muted);
-}
-.frontmatter-container {
-  color:var(--text-muted);
-  font-size:var(--font-small);
-  padding:10px 0;
-  background:transparent;
-  border-radius:0;
-  margin:0;
-  border:0;
-  border-bottom:1px solid var(--background-modifier-border);
-}
-.frontmatter-container .frontmatter-container-header {
-  padding:0;
-  font-weight:500;
-  border-bottom:0;
-  font-size:var(--font-small);
-}
-.frontmatter-container .frontmatter-container-header:before {
 }
 
 /* Blockquotes */

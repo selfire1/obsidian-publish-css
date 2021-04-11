@@ -71,7 +71,7 @@ Minimal Styling
   /*----------------------------------------------------------------
 
   Colors*/
-  --background-primary: #f2f3f5;
+  --background-primary: #FBFBFB;
   --background-primary-alt: #ffffff;
   --background-secondary: #2E3235;
   --background-secondary-alt: #f2f3f5;
@@ -85,7 +85,7 @@ Minimal Styling
   --background-modifier-error-rgb: 230, 135, 135;
   --background-modifier-error-hover: #bb0000;
   --background-modifier-cover: rgba(0, 0, 0, 0.8);
-  --text-accent: #3C7760;
+  --text-accent: #008D42;
   --text-accent-hover: #F2CA6C;
   --text-accent-unresolved: rgba(60, 119, 96, 0.8);
   --text-color-external: (var(--text-accent));
@@ -944,13 +944,23 @@ iframe {
   opacity: 0.5;
 }
 
+.markdown-preview-view .internal-link {
+  text-decoration: none;
+}
+
 .markdown-preview-view .internal-link:hover {
+  color: var(--text-accent);
   text-decoration: underline;
   text-decoration-thickness: 4px;
   text-decoration-color: var(--text-accent-hover);
 }
 
+a:hover {
+  color: var(--text-accent-hover);
+}
+
 .external-link {
+  color:var(--text-accent);
   text-decoration:underline;
 }
 
@@ -997,17 +1007,16 @@ iframe {
   color: var(--text-accent-unresolved);
 }
 
-.external-link,
-.external-link:hover {
-  color: var(--text-color-external);
-  opacity: 0.9;
+.published-container.has-graph .graph-view-outer {
+  padding: 10px;
 }
+
 
 /* || Code */
 .markdown-preview-view code,
 .cm-s-obsidian span.cm-inline-code {
   border: 1px solid rgb(229 229 229);
-  background-color: var(--background-secondary-alt);
+  background-color: var(--text-faint);
   border-radius: 5px;
 }
 /* Rounded `codeblocks` (singe-tick) */
@@ -1038,8 +1047,8 @@ border: 1px solid rgba(255,255,255,0.03);
 padding: 10px 20px;
 position: relative;
 box-shadow: -10px -10px 30px rgba(255,255,255,0.05), 10px 10px 30px rgba(0,0,0,0.2);
-/* background-color: rgba(255,255,255,0.01); */
-background-color: var(--text-faint);
+background-color: rgba(255,255,255,0.01);
+/* background-color: var(--text-faint); */
 }
 
 .markdown-preview-view blockquote::before {

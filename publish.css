@@ -144,33 +144,6 @@ Minimal Styling
   --border-width-alt:1px;
 }
 
-/* --------------- */
-/* Image zoom  */
-
-.view-content img {
-  max-width:100%;
-  cursor:zoom-in;}
-.view-content img:active {
-  cursor:zoom-out;
-  display:block;
-  z-index:100;
-  position:fixed;
-    max-height:calc(100% + 1px);
-    max-width:calc(100% - 20px);
-    height:calc(100% + 1px);
-    width:100%;
-    object-fit:contain;
-    margin:-0.5px auto 0;
-    text-align:center;
-    top:50%;
-    transform:translateY(-50%);
-    padding:0;
-    left:0;
-    right:0;
-    bottom:0;
-    background:var(--background-translucent);
-}
-
 /*----------------------------------------------------------------
 
 MINIMAL STYLING */
@@ -180,7 +153,9 @@ MINIMAL STYLING */
 h1,h2,h3,h4,h5,strong {font-weight:var(--bold-weight);}
 h1,h2,h3,h4 {letter-spacing:-0.02em;}
 
-/* Headings */
+
+
+/* Headers */
 
 .view-header-title,
 .file-embed-title,
@@ -189,37 +164,30 @@ h1,h2,h3,h4 {letter-spacing:-0.02em;}
   text-align:left;
   font-size:1.125em;
   font-weight:var(--bold-weight);
+  font-family: var(--font-header);
 }
-.empty-state-title,
-.markdown-preview-view h1,
-.HyperMD-header-1,
-.cm-header-1 {
+
+h1 {
   letter-spacing:-0.02em;
   font-size:var(--h1);
   line-height:1.3;
   font-weight:var(--bold-weight);
 }
-.markdown-preview-view h2,
-.HyperMD-header-2,
-.cm-header-2 {
+h2 {
   letter-spacing:-0.02em;
   font-size:var(--h2);
   line-height:0.9444444444rem;
   padding-top: 1.3rem;
   font-weight:var(--bold-weight);
 }
-.markdown-preview-view h3,
-.HyperMD-header-3,
-.cm-header-3 {
+h3 {
   letter-spacing:-0em;
   font-weight:500;
   font-size:var(--h3);
   line-height:1.4;
   padding-top: 1.15rem;
 }
-.markdown-preview-view h4,
-.HyperMD-header-4,
-.cm-s-obsidian .cm-header-4 {
+h4 {
   letter-spacing:0.02em;
   color:var(--text-normal);
   font-weight:500;
@@ -227,9 +195,7 @@ h1,h2,h3,h4 {letter-spacing:-0.02em;}
   padding-top: 1rem;
   font-variant: normal;
 }
-.markdown-preview-view h5,
-.HyperMD-header-5,
-.cm-s-obsidian .cm-header-5 {
+h5 {
   letter-spacing:0.02em;
   color:var(--text-normal);
   font-weight:500;
@@ -876,19 +842,8 @@ a[href*="obsidian://search"] {
 .theme-dark a[href*="obsidian://search"] {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='17' height='17' class='search'%3E%3Cpath fill='white' stroke='white' stroke-width='2' d='M42,6C23.2,6,8,21.2,8,40s15.2,34,34,34c7.4,0,14.3-2.4,19.9-6.4l26.3,26.3l5.6-5.6l-26-26.1c5.1-6,8.2-13.7,8.2-22.1 C76,21.2,60.8,6,42,6z M42,10c16.6,0,30,13.4,30,30S58.6,70,42,70S12,56.6,12,40S25.4,10,42,10z'%3E%3C/path%3E%3C/svg%3E");
 }
-.minimal-theme:not(.links-int-on) a[href*="obsidian://"],
-.minimal-theme:not(.links-int-on) .markdown-preview-view .internal-link,
-.minimal-theme:not(.links-int-on) .external-link {
-  text-decoration:none;
-}
-.minimal-theme.links-int-on .markdown-preview-view .internal-link,
-.markdown-preview-view .internal-link {
-  text-decoration: none;
-}
-.minimal-theme.links-ext-on .external-link,
-.external-link {
-  text-decoration:underline;
-}
+
+
 .footnotes-list {
   margin-block-start:-10px;
   padding-inline-start:20px;
@@ -917,17 +872,7 @@ a[href*="obsidian://search"] {
   color:inherit;
 }
 
-/* Blockquotes */
 
-.markdown-preview-view blockquote {
-  border-radius:0;
-  border:solid var(--quote-opening-modifier);
-  border-width:0px 0px 0px 1px;
-  background-color:transparent;
-  color:var(--text-muted);
-  padding:0 0 0 calc(var(--nested-padding) / 2);
-  margin-inline-start:var(--nested-padding);
-}
 
 /* Tables */
 
@@ -950,9 +895,7 @@ a[href*="obsidian://search"] {
 }
 
 /* Bible Verses */
-.markdown-preview-view h6,
-.cc-pretty-preview .markdown-preview-view h6
-{
+h6 {
   position: relative;
   left: -5%;
   top: 28px;
@@ -996,4 +939,121 @@ iframe {
   display: block;
   border-style: none;
   margin: 0 auto;
+}
+
+/* || LINKS */
+.internal-link.is-unresolved {
+  opacity: 0.5;
+}
+
+.markdown-preview-view .internal-link,
+.markdown-preview-view .internal-link {
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  text-decoration-color: var(--text-accent-hover);
+}
+
+.external-link {
+  text-decoration:underline;
+}
+
+/* --------------- */
+/* Image zoom  */
+
+.view-content img {
+  max-width:100%;
+  cursor:zoom-in;}
+.view-content img:active {
+  cursor:zoom-out;
+  display:block;
+  z-index:100;
+  position:fixed;
+    max-height:calc(100% + 1px);
+    max-width:calc(100% - 20px);
+    height:calc(100% + 1px);
+    width:100%;
+    object-fit:contain;
+    margin:-0.5px auto 0;
+    text-align:center;
+    top:50%;
+    transform:translateY(-50%);
+    padding:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:var(--background-translucent);
+}
+
+/* || Graph */
+.graph-view.color-fill-unresolved {
+  opacity: 0.5;
+}
+.graph-view.color-fill {
+  color: var(--text-accent);
+}
+.graph-view.color-fill:hover {
+  color: var(--text-accent-hover);
+}
+
+.markdown-preview-view .internal-link.is-unresolved {
+  opacity: 0.8;
+  color: var(--text-accent-unresolved);
+}
+
+.external-link,
+.external-link:hover {
+  color: var(--text-color-external);
+  opacity: 0.9;
+}
+
+/* || Code */
+.markdown-preview-view code,
+.cm-s-obsidian span.cm-inline-code {
+  border: 1px solid rgb(229 229 229);
+  background-color: var(--background-secondary-alt);
+  border-radius: 5px;
+}
+/* Rounded `codeblocks` (singe-tick) */
+/* set text and colour of codeblock */
+.cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
+    color: inherit;
+    background-color: #374151;
+    padding: 2px 4px;
+}
+
+/* give rounded left edge to codeblock formatting*/
+span.cm-formatting.cm-formatting-code.cm-inline-code{
+    border-radius: 4px 0px 0px 4px;
+    background-color: #374151;
+    color:inherit;
+    padding: 2px 4px;
+}
+
+/* give rounded right edge to codeblock formatting */
+span.cm-inline-code + span.cm-formatting.cm-formatting-code.cm-inline-code{
+    border-radius: 0px 4px 4px 0px;
+}
+
+/* Blockquotes: Discord */
+.markdown-preview-view blockquote {
+border-radius: 10px;
+border: 1px solid rgba(255,255,255,0.03);
+padding: 10px 20px;
+position: relative;
+box-shadow: -10px -10px 30px rgba(255,255,255,0.05), 10px 10px 30px rgba(0,0,0,0.2);
+/* background-color: rgba(255,255,255,0.01); */
+background-color: var(--text-faint);
+}
+
+.markdown-preview-view blockquote::before {
+content: "\201C";
+position: absolute;
+font-size: 3em;
+top: 0.3em;
+left: -0.15em;
+}
+
+/* Site header */
+.site-header {
+  border-bottom: none !important;
 }

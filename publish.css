@@ -927,11 +927,9 @@ div.markdown-embed-link {
     visibility: hidden;
 }
 
-/* Backlinks */
-.published-section-header-icon + span {
-    position: relative;
-    top: -1px;
-    color: var(--text-accent-hover);
+/* Publish Headers (Links to this page / interactive graph) */
+.published-section-header {
+  color: var(--text-accent-hover);
 }
 
 /* || IFRAMES */
@@ -946,8 +944,7 @@ iframe {
   opacity: 0.5;
 }
 
-.markdown-preview-view .internal-link,
-.markdown-preview-view .internal-link {
+.markdown-preview-view .internal-link:hover {
   text-decoration: underline;
   text-decoration-thickness: 4px;
   text-decoration-color: var(--text-accent-hover);
@@ -1056,4 +1053,29 @@ left: -0.15em;
 /* Site header */
 .site-header {
   border-bottom: none !important;
+}
+
+/* Site bars */
+.site-body-left-column,
+.site-body-left-column:before {
+  background-color: var(--background-secondary);
+  border-right: none !important;
+}
+
+.tree-item-inner {
+  color: var(--text-faint);
+}
+
+.site-body-right-column {
+  background-color: var(--background-secondary);
+}
+
+/* Containers */
+.graph-view-container {
+  border: none;
+  box-shadow: none;
+  background-color: var(--background-primary);
+}
+.outline-view-outer .collapsible-item-self.mod-active {
+  background-color: var(--background-primary);
 }

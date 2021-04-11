@@ -66,7 +66,7 @@ Minimal Styling
 
 ----------------------------------------------------------------*/
 
-:root {
+.theme-light {
 
   /*----------------------------------------------------------------
 
@@ -167,27 +167,27 @@ h1,h2,h3,h4 {letter-spacing:-0.02em;}
   font-family: var(--font-header);
 }
 
-h1 {
+.markdown-preview-view h1 {
   letter-spacing:-0.02em;
   font-size:var(--h1);
   line-height:1.3;
   font-weight:var(--bold-weight);
 }
-h2 {
+.markdown-preview-view h2 {
   letter-spacing:-0.02em;
   font-size:var(--h2);
   line-height:0.9444444444rem;
   padding-top: 1.3rem;
   font-weight:var(--bold-weight);
 }
-h3 {
+.markdown-preview-view h3 {
   letter-spacing:-0em;
   font-weight:500;
   font-size:var(--h3);
   line-height:1.4;
   padding-top: 1.15rem;
 }
-h4 {
+.markdown-preview-view h4 {
   letter-spacing:0.02em;
   color:var(--text-normal);
   font-weight:500;
@@ -195,7 +195,7 @@ h4 {
   padding-top: 1rem;
   font-variant: normal;
 }
-h5 {
+.markdown-preview-view h5 {
   letter-spacing:0.02em;
   color:var(--text-normal);
   font-weight:500;
@@ -895,7 +895,7 @@ a[href*="obsidian://search"] {
 }
 
 /* Bible Verses */
-h6 {
+.markdown-preview-view h6 {
   position: relative;
   left: -5%;
   top: 28px;
@@ -1051,8 +1051,8 @@ left: -0.15em;
 }
 
 /* Site header */
-.site-header {
-  border-bottom: none !important;
+.page-header {
+  display: none !important;
 }
 
 /* Site bars */

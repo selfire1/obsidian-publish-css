@@ -70,9 +70,44 @@ Minimal Styling
 
   /*----------------------------------------------------------------
 
-  Colors
-
-  */
+  Colors*/
+  --background-primary: #f2f3f5;
+  --background-primary-alt: #ffffff;
+  --background-secondary: #e6b78b0d;
+  --background-secondary-alt: #f2f3f5;
+  --background-accent: #fff;
+  --background-modifier-border: #ddd;
+  --background-modifier-form-field: #fff;
+  --background-modifier-form-field-highlighted: #fff;
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
+  --background-modifier-success: #a4e7c3;
+  --background-modifier-error: #990000;
+  --background-modifier-error-rgb: 230, 135, 135;
+  --background-modifier-error-hover: #bb0000;
+  --background-modifier-cover: rgba(0, 0, 0, 0.8);
+  --text-accent: #21a2d1;
+  --text-accent-hover: #21a2d1;
+  --text-accent-unresolved: #555454;
+  --text-color-external: #21a2d1;
+  --text-color-header: #000000a6;
+  --text-normal: #2d2e2e;
+  --text-muted: #5e5e5e;
+  --text-muted-rgb: 136, 136, 136;
+  --text-faint: #999999;
+  --text-error: #800000;
+  --text-error-hover: #990000;
+  --text-highlight-bg: rgba(255, 255, 0, 0.4);
+  --text-selection: rgba(204, 230, 255, 0.99);
+  --text-on-accent: #f2f3f5;
+  --interactive-normal: #f2f3f5;
+  --interactive-hover: #e9e9e9;
+  --interactive-accent: #21a2d1;
+  --interactive-accent-rgb: 123, 108, 217;
+  --interactive-accent-hover: #21a2d1;
+  --scrollbar-active-thumb-bg: rgba(0, 0, 0, 0.2);
+  --scrollbar-bg: #ffffff00;
+  --scrollbar-thumb-bg: rgb(217 216 216);
+  
 
   /*----------------------------------------------------------------
 
@@ -80,6 +115,7 @@ Minimal Styling
 
   /* Preview mode */
 
+  --font-family-preview:var(--text);
   --text:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
   --font-header:'Playfair Display', serif;
   /* Code */
@@ -107,120 +143,7 @@ Minimal Styling
   --border-width:1px;
   --border-width-alt:1px;
 
-
-/*----------------------------------------------------------------
-
-  THEME
-
-  These values are mostly driven by the options above */
-
-  .theme-light {
-    --background-primary:white;
-    --background-primary-alt:hsl(var(--base-h),var(--base-s),var(--base-l));
-    --background-secondary:hsl(var(--base-h),var(--base-s),var(--base-l));
-    --background-secondary-alt:hsl(var(--base-h),var(--base-s),var(--base-l));
-    --background-tertiary:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 5%));
-    --background-modifier-border:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 6%));
-    --background-modifier-border-hover:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 12%));
-    --background-modifier-border-focus:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 20%));
-    --background-modifier-form-field:hsl(var(--base-h),var(--base-s),calc(var(--base-l) + 6%));
-    --background-modifier-form-field-highlighted:hsl(var(--base-h),var(--base-s),calc(var(--base-l) + 8%));
-    --text-normal:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 80%));
-    --text-muted:hsl(var(--base-h),calc(var(--base-s) - 5%),calc(var(--base-l) - 45%));
-    --text-faint:hsl(var(--base-h),calc(var(--base-s) - 5%),calc(var(--base-l) - 25%));
-    --background-transparent:hsla(var(--base-h),var(--base-s),var(--base-l),0);
-    --background-translucent:rgba(255,255,255,0.85);
-    --background-match-highlight:hsla(var(--accent-h), 40%, 62%, 0.2);
-    --background-modifier-accent:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-l) + 10%));
-    --text-accent:#008D42;
-    --text-accent-hover:#F2CA6C;
-    --text-on-accent:white;
-    --icon-hex:000;
-    --interactive-accent:#008D42;
-    --interactive-accent-hover:#F2CA6C;
-    --quote-opening-modifier:#F2CA6C;
-    --interactive-accent-rgb:220, 220, 220;
-    --text-selection:hsla(var(--accent-h),50%,calc(var(--base-l) - 20%), 30%);
-    --text-highlight-bg:rgba(255, 224, 0, 0.5);
-    --text-highlight-bg-active:rgba(0, 0, 0, 0.1);
-    --background-modifier-cover:hsla(var(--base-h),var(--base-s),calc(var(--base-l) - 5%),0.7);
-  }
-
-  .theme-light.minimal-light-contrast .workspace-fake-target-overlay.is-in-sidebar,
-  .theme-light.minimal-light-contrast .titlebar,
-  .theme-light.minimal-light-contrast .status-bar,
-  .theme-light.minimal-light-contrast .workspace-ribbon.mod-left,
-  .theme-light.minimal-light-contrast .mod-left-split,
-  .theme-light.minimal-light-contrast .modal.mod-settings .vertical-tab-header,
-  .theme-dark {
-    --background-primary:hsl(var(--base-h),var(--base-s),var(--base-d));
-    --background-primary-alt:hsl(var(--base-h),var(--base-s),calc(var(--base-d) - 2%));
-    --background-secondary:hsl(var(--base-h),var(--base-s),calc(var(--base-d) - 2%));
-    --background-secondary-alt:hsl(var(--base-h),var(--base-s),var(--base-d));
-    --background-tertiary:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 2%));
-    --background-modifier-border:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 4%));
-    --background-modifier-border-hover:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 10%));
-    --background-modifier-border-focus:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 20%));
-    --background-modifier-box-shadow:rgba(0, 0, 0, 0.3);
-    --text-normal:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 67%));
-    --text-muted:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 45%));
-    --text-faint:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 20%));
-    --background-transparent:hsla(var(--base-h),var(--base-s),var(--base-d),0);
-    --background-translucent:hsla(var(--base-h),var(--base-s),var(--base-d),0.85);
-    --background-match-highlight:hsla(var(--accent-h), 40%, 62%, 0.2);
-    --background-modifier-accent:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-d) - 10%));
-    --text-accent:hsl(var(--accent-h),var(--accent-s),var(--accent-d));
-    --text-accent-hover:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-d) + 12%));
-    --text-on-accent:white;
-    --icon-hex:FFF;
-    --interactive-accent:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-d) - 20%));
-    --interactive-accent-hover:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-d) - 15%));
-    --quote-opening-modifier:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 10%));
-    --interactive-accent-rgb:66, 66, 66;
-    --text-selection:hsla(var(--accent-h),70%,40%,30%);
-    --text-highlight-bg:rgba(255, 177, 80, 0.3);
-    --text-highlight-bg-active:rgba(255, 255, 255, 0.1);
-    --background-modifier-cover:hsla(var(--base-h),var(--base-s),calc(var(--base-d) - 12%),0.8);
-  }
-  .theme-light.minimal-light-white {
-    --background-secondary:white;
-  }
-  .theme-light.minimal-light-tonal {
-    --background-primary:hsl(var(--base-h),var(--base-s),var(--base-l));
-    --background-primary-alt:hsl(var(--base-h),var(--base-s),calc(var(--base-l) - 4%));
-    --background-translucent:hsla(var(--base-h),var(--base-s),var(--base-l),0.85);
-  }
-  .theme-dark.minimal-dark-tonal {
-    --background-secondary:hsl(var(--base-h),var(--base-s),var(--base-d));
-    --background-tertiary:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 4%));
-  }
-  .theme-dark.minimal-dark-black {
-    --base-d:0%;
-    --background-primary-alt:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 6%));
-    --background-tertiary:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 10%));
-    --background-modifier-border:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 12%));
-    --background-modifier-border-hover:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 20%));
-    --background-modifier-border-focus:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 30%));
-    --background-modifier-cover:hsla(var(--base-h),var(--base-s),calc(var(--base-d) + 8%),0.9);
-    --text-normal:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 75%));
-    --text-muted:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 50%));
-    --text-faint:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 25%));
-    --icon-muted:0.5;
-    --background-modifier-box-shadow:rgba(0, 0, 0, 1);
-  }
-
-.borders-low {
-  --border-width:0px;
-  --border-width-alt:1px;
-}
-.borders-none {
-  --border-width:0px;
-  --border-width-alt:0px;
-}
-
-
-/*----------------------------------------------------------------
-
+/*
 SPECIAL FEATURES
 
 Frameless mode on macOS only */

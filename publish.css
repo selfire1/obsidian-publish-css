@@ -15,8 +15,6 @@ Inspired by:
 TOC
 
 Options
-
-  Disabled features
   Colors
   Font styles
   Cursor
@@ -63,26 +61,6 @@ Minimal Styling
 
 
 ----------------------------------------------------------------
-
-OPTIONS
-
-Disabled features */
-
-.tree-item-flair:not(.tag-pane-tag-count) { /* Search counts */
-  display:none;
-}
-
-/* Hides the name of the root folder */
-.nav-folder.mod-root > .nav-folder-title .nav-folder-title-content {
-  display:none;
-}
-
-/* Remove this if you re-enable status bar */
-.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
-.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
-  height:100%;
-}
-
 
 :root {
 

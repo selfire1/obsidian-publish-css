@@ -9,11 +9,11 @@ Obsidian Publish for THE X
 
 
 Inspired by:
-  * Minimal Obsidian 2.5.4 by @kepano
-  Sponsor his work on Patreon: https://www.patreon.com/kepano
-  Readme: https://github.com/kepano/obsidian-minimal
+  * Minimal Obsidian 2.5.4 by @kepano: https://github.com/kepano/obsidian-minimal
+    Sponsor his work on Patreon: https://www.patreon.com/kepano
   * Chad Bennet's Publish CSS: https://github.com/chad-bennett/obsidian-publish-css/blob/main/publish.css
   * Eric Gregorich's Publish CSS: https://github.com/ericgregorich/Obsidian-Publish-CSS/blob/main/publish.css
+  * Callout boxes from Vileplume: https://github.com/hungsu/vileplume-obsidian
 
 ----------------------------------------------------------------
 
@@ -911,22 +911,7 @@ a[href*="obsidian://search"] {
   color: var(--text-faint);
 }
 
-/* Embedding */
-div.markdown-embed .markdown-preview-view h6 {
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    margin: 0px;
-  }
 
-.markdown-preview-view .markdown-embed-content p:first-child {
-    margin: 1px;
-    top: 10px;
-}
-
-div.markdown-embed-link:not([src*="#v^"]) {
-    visibility: hidden;
-}
 
 /* Publish Headers (Links to this page / interactive graph) */
 .published-section-header {
@@ -958,7 +943,7 @@ iframe {
   text-decoration: underline;
   text-decoration-thickness: 4px;
   text-decoration-color: var(--text-accent-hover-rgba);
-  /* text-decoration-skip-ink: none; */
+  text-decoration-skip-ink: none;
 }
 
 a:hover {
@@ -1044,23 +1029,25 @@ span.cm-inline-code + span.cm-formatting.cm-formatting-code.cm-inline-code{
     border-radius: 0px 4px 4px 0px;
 }
 
-/* Blockquotes: Discord */
-.markdown-preview-view blockquote {
+/* ----------------------------------- */
+/* Fences and styled text blocks */
+/* ----------------------------------- */
+
+/* || Callouts from Vileplume
+used in a custom codefence */
+
+pre.language-co {
 border-radius: 10px;
 border: 1px solid rgba(255,255,255,0.03);
 padding: 10px 20px;
 position: relative;
 box-shadow: -10px -10px 30px rgba(255,255,255,0.05), 10px 10px 30px rgba(0,0,0,0.2);
 background-color: rgba(255,255,255,0.01);
-/* background-color: var(--text-faint); */
 }
 
-.markdown-preview-view blockquote::before {
-content: "\201C";
-position: absolute;
-font-size: 3em;
-top: 0.3em;
-left: -0.15em;
+code.language-co.is-loaded {
+  font-family: var(--text);
+  white-space: normal;
 }
 
 /* Site header */
@@ -1083,11 +1070,62 @@ left: -0.15em;
 .tree-item-inner:active {
   color: var(--text-accent-hover);
 }
+/* ----------------------------------- */
+/* || Epistemological status styling via Highlighting */
+.markdown-preview-view mark {
+    background-color: var(--background-primary);
+    color: var(--text-faint);
+    font-size: var(--font-small);
+    font-style: italic;
+}
+
+.markdown-preview-view mark .internal-link {
+  color: var(--text-faint);
+}
+
+.markdown-preview-view mark .internal-link:hover {
+  color: var(--text-faint);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--text-accent-hover-rgba);
+}
+
+/* ----------------------------------- */
+/* Bible verse embeds */
+div.markdown-embed .markdown-preview-view h6 {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    margin: 0px;
+    display: none;
+  }
+
+.markdown-preview-view .markdown-embed-content p:first-child {
+    margin: 1px;
+    top: 10px;
+}
+
+div.markdown-embed-link:not([src*="#v^"]) {
+    visibility: hidden;
+}
+/* 
+For a fun quotemark:
+
+.markdown-preview-view .markdown-embed-content::before {
+    content: "\201C";
+    position: absolute;
+    font-size: 3em;
+    font-family: var(--font-header);
+    color: var(--text-faint);
+} */
+
+
+/* ----------------------------------- */
 
 /* Ribbon, focussed item in file tree */
 .nav-view-outer .tree-item-self.mod-active {
   background-color: transparent;
-  color: var(--text-accent-hover);
+  color: var(--text-accent-hover) !important;
 }
 
 .site-body-right-column {
@@ -1139,4 +1177,12 @@ left: -0.15em;
 /* Footer */
 .site-footer {
     display: none;
+}
+
+
+/* ----------------------------------- */
+/* Hide irrelevant documents */
+/* ----------------------------------- */
+.tree-item-self:not([data-path^='Bible Study Kit']):not([data-path^='Scripture (WEB)']):not([data-path^='+Welcome']):not([data-path^='Books MOC']):not([data-path^='Contact me']) {
+  display: none;
 }

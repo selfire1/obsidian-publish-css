@@ -1042,7 +1042,7 @@ border: 1px solid rgba(255,255,255,0.03);
 padding: 10px 20px;
 position: relative;
 box-shadow: -10px -10px 30px rgba(255,255,255,0.05), 10px 10px 30px rgba(0,0,0,0.2);
-background-color: var(--background-primary-alt);
+background-color: var(--background-primary-alt) !important;
 }
 
 code.language-co.is-loaded {
@@ -1185,4 +1185,19 @@ For a fun quotemark:
 /* ----------------------------------- */
 .tree-item-self:not([data-path^='Bible Study Kit']):not([data-path^='Scripture (WEB)']):not([data-path^='+Welcome']):not([data-path^='Books MOC']):not([data-path^='Contact me']) {
   display: none;
+}
+
+/* ----------------------------------- */
+/* Side logo */
+/* ----------------------------------- */
+.site-body-left-column-site-name {
+  text-align: center;
+  margin: 0 auto;
+}
+.site-body-left-column-site-name::before {
+    background: none;
+    display: block;
+    content: url(https://publish-01.obsidian.md/access/7468061…/garden-icon.svg);
+    width: 60%;
+    margin: 0 auto;
 }

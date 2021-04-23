@@ -14,7 +14,7 @@ I like to [Steal from my heroes](https://joschuasgarden.com/Steal+from+your+hero
 * Tips:
     * Eric's [Publish CSS tips](https://ericgregorich.com/obsidian-publish-css/)
     * Importing custom fonts tip from [quantumgardener.blog](https://quantumgardener.blog/garden/Changing+the+look+of+your+Obsidian+site+using+fonts+and+CSS)
-Snippets / Inspiration:
+* Snippets / Inspiration:
     * Callout boxes from [Vileplume](https://github.com/hungsu/vileplume-obsidian)
     * Epistemic status from [devonzuegel](https://devonzuegel.com/post/epistemic-statuses-are-lazy-and-that-is-a-good-thing)
     * Icon from [iconmonstr](https://iconmonstr.com/)

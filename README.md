@@ -2,7 +2,7 @@
 
 The CSS for my Obsidian publish site: [joschuasgarden.com](https://joschuasgarden.com/).
 
-![[site-overview.png]]
+![picture of my digital garden](https://github.com/selfire1/obsidian-publish-css/blob/main/site-overview.png?raw=true)
 
 **Noteworthy inspirations:**
 I like to [Steal from my heroes](https://joschuasgarden.com/Steal+from+your+heroes). I copied, changed and pasted a lot to come up with a style I cherish.
@@ -21,7 +21,7 @@ Snippets / Inspiration:
 
 ## Special tweaks
 ### Callout Codeblocks
-![[site-callout.png]]
+![picture of callouts](https://github.com/selfire1/obsidian-publish-css/blob/main/site-callout.png?raw=true)
 
 Callouts help to make important things pop out.
 Everything I put in three backticks followed by "co" gets formatted this way. ` ```co `
@@ -48,7 +48,7 @@ code.language-co.is-loaded {
 ### Annotation formatting
 I want to include Levels of certainty and effort in some of my notes. Therefore I adapted the highlighting syntax `==…==`. Everything between these two equal signs will get formatted. Links still work.
 
-![[annotations.png]]
+![picture of annotations](https://github.com/selfire1/obsidian-publish-css/blob/main/annotations.png?raw=true)
 
 ```css
 /* || Epistemological status styling via Highlighting */
@@ -94,7 +94,8 @@ I want to include Levels of certainty and effort in some of my notes. Therefore 
 ```
 
 ### Site logo
-![[site-overview.png]]
+
+![picture of my digital garden](https://github.com/selfire1/obsidian-publish-css/blob/main/site-overview.png?raw=true)
 
 Having a nice logo can make all the difference.
 

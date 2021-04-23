@@ -1079,8 +1079,13 @@ code.language-co.is-loaded {
     font-style: italic;
 }
 
+.markdown-preview-view mark .internal-link.internal-link.is-unresolved {
+  color: #a4a4a4
+}
+
 .markdown-preview-view mark .internal-link {
   color: var(--text-faint);
+  font-style: normal;
 }
 
 .markdown-preview-view mark .internal-link:hover {
@@ -1088,6 +1093,22 @@ code.language-co.is-loaded {
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-decoration-color: var(--text-accent-hover-rgba);
+}
+
+
+
+.markdown-preview-view mark .internal-link[data-href^='Level of Certainty'] {
+      font-weight: 500;
+      font-style: normal;
+      color: var(--text-muted);
+
+}
+
+.markdown-preview-view mark .internal-link[data-href^='Level of Effort'] {
+      font-weight: 500;
+      font-style: normal;
+      color: var(--text-muted);
+
 }
 
 /* ----------------------------------- */

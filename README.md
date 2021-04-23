@@ -125,4 +125,4 @@ Here, you specify which items you do *not* want to be hidden. So swap these for 
 }
 ```
 ***
-If you find value for this and want to contribute, I'd love for you to sponsor my reading habit [on patreon](https://www.patreon.com/joschua).
+If you find value in this and want to contribute, I'd love for you to sponsor my reading habit [on patreon](https://www.patreon.com/joschua).

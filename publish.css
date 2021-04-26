@@ -1204,7 +1204,7 @@ For a fun quotemark:
 /* ----------------------------------- */
 /* Hide irrelevant documents */
 /* ----------------------------------- */
-.tree-item-self:not([data-path^='Bible Study Kit']):not([data-path^='Scripture (WEB)']):not([data-path^='+Welcome']):not([data-path^='Books MOC']):not([data-path^='Contact me']) {
+.tree-item-self:not([data-path^='Bible Study Kit']):not([data-path^='Scripture (WEB)']):not([data-path^='✌️ Welcome']):not([data-path^='✝️ Faith']):not([data-path^='🌱 About']):not([data-path^='💭 Interests']):not([data-path^='📚 Books']):not([data-path^='🗞 Blog']):not([data-path^='Sign up for my Newsletter! 📮']):not([data-path^='💞 Favourites']) {
   display: none;
 }
 

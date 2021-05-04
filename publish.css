@@ -1,0 +1,1224 @@
+/* <style> */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+/* </style> */
+
+/*
+
+Obsidian Publish for THE X
+
+
+Inspired by:
+  * Minimal Obsidian 2.5.4 by @kepano: https://github.com/kepano/obsidian-minimal
+    Sponsor his work on Patreon: https://www.patreon.com/kepano
+  * Chad Bennet's Publish CSS: https://github.com/chad-bennett/obsidian-publish-css/blob/main/publish.css
+  * Eric Gregorich's Publish CSS: https://github.com/ericgregorich/Obsidian-Publish-CSS/blob/main/publish.css
+  * Callout boxes from Vileplume: https://github.com/hungsu/vileplume-obsidian
+
+----------------------------------------------------------------
+
+TOC
+
+Options
+  Colors
+  Font styles
+  Cursor
+
+Theme
+
+Special Features
+
+  Frameless mode
+  Andy mode for use with Sliding Panes plugin
+  App ribbon removed
+  Focus mode
+  Image zoom
+  Calendar plugin
+
+Minimal Styling
+
+  Headings and fonts
+  Icons
+  Tags
+  Modals
+  Drag ghost
+  Workspace
+  Window frame
+  Title bar
+  Editor mode
+  Internal search
+  Sidebar documents
+  Toggle switches
+  File browser
+  Relationship lines
+  Folding
+  Outline
+  Search
+  Tag pane
+  Status bar
+  Sidedock icons
+  Preview mode
+  Code
+  Popovers
+  Graphs
+  Settings
+  Scroll bars
+
+
+----------------------------------------------------------------*/
+
+.theme-light {
+
+  /*----------------------------------------------------------------
+
+  Colors*/
+  --background-primary: #FBFBFB;
+  --background-primary-alt: #fefefe;
+  --background-dark: #2E3235;
+  --background-dark-alt: #D9BB77;
+  --background-secondary: #f2f3f5;
+  --background-secondary-alt: #f2f3f5;
+  --background-accent: #fff;
+  --background-modifier-border: #ddd;
+  --background-modifier-form-field: #fff;
+  --background-modifier-form-field-highlighted: #fff;
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
+  --background-modifier-success: #a4e7c3;
+  --background-modifier-error: #990000;
+  --background-modifier-error-rgb: 230, 135, 135;
+  --background-modifier-error-hover: #bb0000;
+  --background-modifier-cover: rgba(0, 0, 0, 0.8);
+  --text-accent: #008D42;
+  --text-accent-hover: #F2CA6C;
+  --text-accent-hover-rgba: rgba(242, 202, 108, 0.8);
+  --text-accent-unresolved: rgba(0, 141, 66, 0.8);
+  --text-color-external: (var(--text-accent));
+  --text-color-header: #000000a6;
+  --text-normal: #2d2e2e;
+  --text-muted: #5e5e5e;
+  --text-muted-rgb: 136, 136, 136;
+  --text-faint: #999999;
+  --text-error: #800000;
+  --text-error-hover: #990000;
+  --text-highlight-bg: rgba(59, 176, 131, 0.4);
+  --text-selection: var(--text-accent-hover);
+  --text-on-accent: #f2f3f5;
+  --interactive-normal: #f2f3f5;
+  --interactive-hover: #e9e9e9;
+  --interactive-accent: var(--text-accent-hover);
+  --interactive-accent-rgb: 123, 108, 217;
+  --interactive-accent-hover: var(--text-accent-hover);
+  --scrollbar-active-thumb-bg: rgba(0, 0, 0, 0.2);
+  --scrollbar-bg: #ffffff00;
+  --scrollbar-thumb-bg: rgb(217 216 216);
+  
+
+  /*----------------------------------------------------------------
+
+  Font styles
+
+  /* Preview mode */
+
+  --font-family-preview:var(--text);
+  --text:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  --font-header:'Playfair Display', serif;
+  /* Code */
+
+  --font-monospace:Menlo,SFMono-Regular,Consolas,"Roboto Mono",monospace;
+
+  /* Sizes, weights, padding */
+
+  --font-normal:16px;
+  --font-small:13px;
+  --font-smaller:11px;
+  --font-smallest:10px;
+  --h1:2rem;
+  --h2:1.375rem;
+  --h3:1.2rem;
+  --h4:1rem;
+  --h5:0.875em;
+  --normal-weight:400;   /* Switch to 300 if you want thinner default text */
+  --bold-weight:600;     /* Switch to 700 if you want thicker bold text */
+  --line-width:40rem;    /* Maximum characters per line */
+  --line-height:1.5;
+  --max-width:87%;       /* Amount of padding around the text, use 90% for narrower padding */
+  --nested-padding:3.5%; /* Amount of padding for quotes and transclusions */
+  --icon-muted:0.4;
+  --border-width:1px;
+  --border-width-alt:1px;
+}
+
+/*----------------------------------------------------------------
+
+MINIMAL STYLING */
+
+/* Headings and fonts */
+
+h1,strong {font-weight:var(--bold-weight);}
+/* h1,h2,h3,h4 {letter-spacing:-0.02em;} */
+h1,h2,h3,h4,h5 {font-family: var(--font-header);}
+
+
+
+/* Headers */
+
+.view-header-title,
+.file-embed-title {
+  text-align:left;
+  font-size:1.125em;
+  font-weight:var(--bold-weight);
+}
+
+.markdown-preview-view h1 {
+  font-size:var(--h1);
+  /* line-height:1.3; */
+}
+.markdown-preview-view h2 {
+  font-size:var(--h2);
+  /* line-height:0.9444444444rem; */
+  padding-top: 1.3rem;
+}
+.markdown-preview-view h3 {
+  font-weight:500;
+  font-size:var(--h3);
+  /* line-height:1.4; */
+  padding-top: 1.15rem;
+}
+.markdown-preview-view h4 {
+  letter-spacing:0.02em;
+  color:var(--text-normal);
+  font-weight:500;
+  font-size:var(--h4);
+  padding-top: 1rem;
+  font-variant: normal;
+}
+.markdown-preview-view h5 {
+  letter-spacing:0.02em;
+  color:var(--text-normal);
+  font-weight:500;
+  font-size:var(--h5);
+  padding-top: 0.8rem;
+  font-variant: normal;
+}
+
+/* --------------- */
+/* Tags */
+
+.frontmatter-container .tag,
+.tag,
+.markdown-preview-view .tag:not(.token) {
+  background-color:transparent;
+  border:1px solid var(--background-modifier-border);
+  color:var(--text-faint);
+  font-size:var(--font-smaller);
+  font-family:var(--text);
+  padding:2px 8px;
+  text-align:center;
+  text-decoration:none;
+  display:inline-block;
+  margin:2px 0 0 0;
+  border-radius:14px;
+  line-height: 20px;
+  position: relative;
+  bottom: 1px;
+}
+.tag:hover {
+  color:var(--text-normal);
+  border-color:var(--background-modifier-border-hover);
+}
+.cm-s-obsidian span.cm-hashtag {
+  background-color:transparent;
+  border:1px solid var(--background-modifier-border);
+  color:var(--text-muted);
+  font-size:var(--font-small);
+  font-family:var(--font-ui);
+  text-align:center;
+  text-decoration:none;
+  display:inline-block;
+  margin:2px 0;
+  vertical-align:middle;
+  padding-top:1px;
+  border-left:none;
+  border-right:none;
+  padding-bottom:2px;
+  cursor:text;
+}
+span.cm-hashtag.cm-hashtag-begin {
+  border-top-left-radius:14px;
+  border-bottom-left-radius:14px;
+  padding-left:8px;
+  border-right:none;
+  border-left:1px solid var(--background-modifier-border);
+}
+span.cm-hashtag.cm-hashtag-end {
+  border-top-right-radius:14px;
+  border-bottom-right-radius:14px;
+  border-left:none;
+  padding-right:8px;
+  border-right:1px solid var(--background-modifier-border);
+}
+
+/* --------------- */
+/* Custom line width */
+
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
+  max-width:var(--max-width);
+  width:var(--line-width);
+}
+.markdown-source-view.is-readable-line-width .CodeMirror,
+.CodeMirror,
+.markdown-preview-section {
+  padding-left:0;
+  padding-right:0;
+  margin:0 auto 0 auto;
+  width:var(--line-width);
+  max-width:var(--max-width);
+}
+.view-header-title-container {
+  padding-left:0;
+  padding-right:0px;
+  position:absolute;
+  width:var(--line-width);
+  max-width:var(--max-width);
+  margin:0 auto;
+  left:0;
+  right:0;
+}
+
+/* Transcluded notes and embeds */
+
+.markdown-preview-view.is-readable-line-width .markdown-embed .markdown-preview-sizer {
+  max-width:100%;
+  width:100%;
+}
+
+.markdown-embed h1:first-child {
+  margin-block-start: 0em;}
+
+.markdown-preview-view .markdown-embed {
+  margin-top:var(--nested-padding);
+  padding:0 calc(var(--nested-padding) / 2) 0 var(--nested-padding);
+}
+.markdown-embed-title {
+  display: none;
+}
+.markdown-embed .markdown-preview-sizer:first-child ul {
+  margin-block-start:2px;
+}
+.markdown-embed .markdown-preview-section:last-child p,
+.markdown-embed .markdown-preview-section:last-child ul {
+  margin-block-end:2px;
+}
+.internal-embed:not([src*="#^"]) .markdown-embed-link {
+  left:0;
+  width:100%;
+}
+.markdown-embed-link,
+.file-embed-link {
+  top:0px;
+  right:0;
+  text-align:right;
+}
+.file-embed-link svg,
+.markdown-embed-link svg {
+  width:16px;
+  opacity:0;
+}
+.markdown-embed:hover .file-embed-link svg,
+.markdown-embed:hover .markdown-embed-link svg {
+  opacity:1;
+}
+.markdown-preview-view .markdown-embed-content > .markdown-preview-view {
+  max-height:none !important;}
+.markdown-embed .markdown-preview-view {
+  padding:0;}
+.internal-embed .markdown-embed {
+  border:0;
+  border-left:1px solid var(--quote-opening-modifier);
+  border-radius:0;
+}
+
+/* --------------- */
+/* Checkboxes */
+
+input[type=checkbox] {
+  -webkit-appearance:none;
+  appearance:none;
+  border-radius:50%;
+  border:1px solid var(--background-modifier-border-hover);
+  padding:0;
+}
+input[type=checkbox]:focus,input[type=checkbox]:hover {
+  outline:0;
+  border-color:var(--text-faint);
+}
+.is-flashing input[type=checkbox]:checked,
+input[type=checkbox]:checked {
+  background-color:var(--background-modifier-accent) !important;
+  border:1px solid var(--background-modifier-accent);
+  background-position:center;
+  background-size:70%;
+  background-repeat:no-repeat;
+  background-image:url('data:image/svg+xml; utf8, <svg width="12px" height="10px" viewBox="0 0 12 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-4.000000, -6.000000)" fill="%23ffffff"><path d="M8.1043257,14.0367999 L4.52468714,10.5420499 C4.32525014,10.3497722 4.32525014,10.0368095 4.52468714,9.8424863 L5.24777413,9.1439454 C5.44721114,8.95166768 5.77142411,8.95166768 5.97086112,9.1439454 L8.46638057,11.5903727 L14.0291389,6.1442083 C14.2285759,5.95193057 14.5527889,5.95193057 14.7522259,6.1442083 L15.4753129,6.84377194 C15.6747499,7.03604967 15.6747499,7.35003511 15.4753129,7.54129009 L8.82741268,14.0367999 C8.62797568,14.2290777 8.3037627,14.2290777 8.1043257,14.0367999"></path></g></g></svg>');
+}
+.markdown-preview-section > .contains-task-list {
+  padding-bottom:0.5em;
+}
+.markdown-preview-view ul > li.task-list-item.is-checked {
+  text-decoration:none;
+  color:var(--text-normal);
+}
+.markdown-preview-view .task-list-item-checkbox {
+  width:18px;
+  height:18px;
+  position:relative;
+  top:6px;
+  line-height:0;
+  margin-left:-1.5em;
+  margin-right:6px;
+  filter:none;
+}
+.markdown-preview-view ul > li.task-list-item {
+  text-indent:0;
+  line-height:1.4;
+}
+.markdown-preview-view .task-list-item {
+  padding-inline-start:0;
+}
+.side-dock-plugin-panel-inner {
+  padding-right:6px;
+  padding-left:6px;
+}
+
+/* --------------- */
+/* File browser */
+
+.nav-header {
+  padding:0;
+}
+/*
+.nav-header:after {
+  content:"";
+  pointer-events:none;
+  z-index:9;
+  background:linear-gradient(0deg,var(--background-transparent) 0%,var(--background-secondary) 100%);;
+  height:12px;
+  width:100%;
+  position:fixed;
+}*/
+.nav-buttons-container {
+  padding:10px 5px 0px 5px;
+  margin-bottom:0px !important;
+  justify-content:flex-start;
+  border:0;
+}
+.nav-files-container {
+  overflow-x:hidden;
+  padding-bottom:50px;
+}
+.nav-folder-title {
+  margin:0px;
+  padding:0 10px 0 24px;
+  cursor:var(--cursor);
+}
+.nav-folder-title.is-being-dragged-over {
+  background-color:var(--background-modifier-accent);
+  border-color:var(--background-modifier-accent);
+  border-radius:0;
+  border-left:1px solid transparent;
+  border-right:1px solid transparent;
+}
+.nav-folder-title-content {
+  padding:0px 4px 1px 0;
+}
+.nav-folder-collapse-indicator {
+  top:1px;
+  margin-left:-10px;
+}
+
+.tooltip {
+  font-size:var(--font-small);
+  line-height:1.2;
+  padding:4px 8px;
+  border-radius:4px;
+}
+.nav-file {
+  margin-left:12px;
+  padding-right:4px;
+}
+.nav-file-title {
+  width:calc(100% - 30px);
+  margin:0 8px 0 -4px;
+  padding:2px 2px;
+  border-width:0;
+  border-color:var(--background-secondary);
+  border-radius:6px;
+  cursor:var(--cursor);
+}
+.nav-file-title.is-being-dragged,
+.nav-file-title.is-active,
+body:not(.is-grabbing) .nav-file-title.is-active:hover {
+  background-color:var(--background-tertiary);
+  color:var(--text-normal);
+}
+.nav-file-title-content {
+  width:100%;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  padding:0 5px;
+  vertical-align:middle;
+  cursor:var(--cursor);
+}
+.drop-indicator {
+  border-width:1px;
+}
+.nav-file-icon {
+  margin:1px 0 0 0;
+  vertical-align:bottom;
+  padding:0 0 0 5px;
+}
+.workspace-leaf-content[data-type=starred] .nav-file-title-content {
+  width:calc(100% - 15px);
+}
+body:not(.is-grabbing) .nav-file-title:hover .nav-folder-collapse-indicator,
+body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-collapse-indicator,
+body:not(.is-grabbing) .nav-file-title:hover,
+body:not(.is-grabbing) .nav-folder-title:hover {
+  background:transparent;
+}
+.nav-file-title,
+.tree-item-self,
+.nav-folder-title,
+.is-collapsed .search-result-file-title,
+.tag-pane-tag {
+  font-size:var(--font-small);
+  color:var(--text-muted);
+}
+.search-result-file-title {
+  font-size:var(--font-small);
+  color:var(--text-normal);
+  font-weight:var(--normal-weight);
+}
+.side-dock-collapsible-section-header {
+  font-size:var(--font-small);
+  color:var(--text-muted);
+  cursor:var(--cursor);
+  margin-right:0;
+  margin-left:0;
+}
+.side-dock-collapsible-section-header:hover,
+.side-dock-collapsible-section-header:not(.is-collapsed) {
+  color:var(--text-muted);
+  background:transparent;
+}
+.tree-view-item-self:hover .tree-view-item-collapse,
+.collapsible-item-self.is-clickable:hover {
+  color:var(--text-muted);
+  background:transparent;
+  cursor:var(--cursor);
+}
+.collapsible-item-self.is-clickable {
+  cursor:var(--cursor);
+}
+.search-result-collapse-indicator,
+.search-result-file-title:hover .search-result-collapse-indicator,
+.side-dock-collapsible-section-header-indicator:hover,
+.side-dock-collapsible-section-header:hover .side-dock-collapsible-section-header-indicator,
+.markdown-preview-view .collapse-indicator,
+.tree-view-item-collapse,
+.is-collapsed .search-result-collapse-indicator,
+.nav-folder-collapse-indicator,
+.side-dock-collapsible-section-header-indicator,
+.is-collapsed .side-dock-collapsible-section-header-indicator {
+  color:var(--text-faint);
+  cursor:var(--cursor);
+}
+.nav-folder-title.is-being-dragged-over .nav-folder-collapse-indicator {
+  color:var(--text-normal);
+}
+
+
+/* --------------- */
+/* Relationship lines */
+
+/* Relationship lines in Preview */
+
+body.minimal-rel-preview .markdown-preview-view ul ul {
+  position:relative;
+}
+body.minimal-rel-preview .markdown-preview-view ul ul::before {
+  content:'';
+  border-left:1px solid var(--background-modifier-border);
+  position:absolute;
+  left:-14px;
+  top:0;
+  bottom:0;
+}
+body.minimal-rel-preview .markdown-preview-view ul.contains-task-list::before {
+  top:5px;
+}
+body.minimal-rel-preview .markdown-preview-view .task-list-item-checkbox {
+  margin-left:-21px;
+}
+
+/* --------------- */
+/* Outline */
+
+.outline {
+  padding:15px 10px 20px 0;
+  font-size:var(--font-small);
+}
+.outline .pane-empty {
+  font-size:var(--font-small);
+  color:var(--text-faint);
+  padding:0 0 0 15px;
+  width:100%;
+}
+.outline .collapsible-item-self {
+  cursor:var(--cursor);
+  line-height:1.4;
+  margin-bottom:4px;
+  font-size:var(--font-small);
+  padding-left:15px;
+}
+.collapsible-item-collapse {
+  opacity:1;
+  left:-5px;
+  color:var(--text-faint);
+}
+.outline .collapsible-item-inner:hover {
+  color:var(--text-normal);
+}
+.collapsible-item-self.is-clickable:hover .collapsible-item-collapse {
+  color:var(--text-normal);
+}
+.outline > .collapsible-item > .collapsible-item-self .right-triangle {
+  opacity:0;
+}
+
+/* --------------- */
+/* Search */
+
+.search-result-container.mod-global-search .search-empty-state {
+  padding-left:15px;
+}
+.search-result-file-match {
+  cursor:var(--cursor) !important;
+}
+.search-result-file-match:hover {
+  color:var(--text-normal);
+  background:transparent;
+}
+.search-result-container:before {
+  height:1px;
+}
+.search-result-container.is-loading:before {
+  background-color:var(--background-modifier-accent);
+}
+.search-result {
+  margin-bottom:0;
+}
+.search-result-count {
+  opacity:1;
+  color:var(--text-faint);
+  padding:0 0 0 5px;
+}
+.search-result-file-match:before {
+  top:0;
+}
+.search-result-file-match:not(:first-child) {
+  margin-top:0px;}
+.search-result-file-match {
+  margin-top:0;
+  margin-bottom:0;
+  padding-top:6px;
+  padding-bottom:5px;
+}
+.search-result-file-matched-text {
+  background-color:var(--text-selection);
+}
+.search-input-container input,
+.search-input-container input:hover,
+.search-input-container input:focus {
+  font-size:var(--font-small);
+  padding:5px 10px;
+  background-color:var(--background-secondary);
+}
+.search-input-container {
+  width:calc(100% - 20px);
+  margin:0 10px 5px;
+}
+
+.workspace-leaf-content .setting-item {
+  padding:5px 0;
+  border:none;
+}
+.workspace-leaf-content .setting-item-control {
+  flex-shrink:0;
+  flex:1;
+}
+
+.search-input-clear-button {
+  cursor:var(--cursor);
+  top:0px;
+  bottom:0px;
+  border-radius:15px;
+  line-height:0px;
+  height:15px;
+  width:15px;
+  margin:auto;
+  padding:6px 0 0 0;
+  text-align:center;
+  vertical-align:middle;
+  align-items:center;
+  color:var(--text-faint);
+}
+.search-input-clear-button:hover {
+  color:var(--text-normal);
+}
+.search-input-clear-button:before {
+  font-size:22px;
+  font-weight:200;
+}
+.search-input {
+  max-width:100%;
+  margin-left:0;
+  width:500px;
+}
+input.search-input:focus {
+  border-color:var(--background-modifier-border);
+}
+.workspace-leaf-content[data-type='search'] .search-result-file-matches {
+  border-left:0;
+  padding-left:0;
+}
+.search-empty-state {
+  font-size:var(--font-small);
+  color:var(--text-faint);
+  padding-left:5px;
+  margin:0;
+}
+.search-result-container {
+  padding:5px 10px 5px 0px;
+}
+.search-result-file-title {
+  line-height:1.3;
+  padding:4px 4px 4px 24px;
+  vertical-align:middle;
+  cursor:var(--cursor)!important;
+}
+.tree-item-inner,
+.search-result-file-title {
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.search-result-collapse-indicator {
+  left:0px;
+}
+.search-result-file-match:before {
+  height:0.5px;
+}
+.search-result-file-matches {
+  font-size:var(--font-smaller);
+  line-height:1.3;
+  margin-bottom:8px;
+  padding:0 0 6px 0;
+  color:var(--text-muted);
+  border-bottom:1px solid var(--background-modifier-border-focus);
+}
+.search-info-container {
+  font-size:var(--font-smaller);
+  color:var(--text-faint);
+  padding-top:5px;
+  padding-bottom:5px;
+}
+.search-info-more-matches {
+  font-size:var(--font-smaller);
+  padding-top:4px;
+  padding-bottom:4px;
+  color:var(--text-normal);
+}
+.side-dock-collapsible-section-header-indicator {
+  display:none;
+}
+.search-result-file-title:hover {
+  color:var(--text-normal);
+  background:transparent;
+}
+.workspace-leaf-content .search-input,
+.workspace-leaf-content .search-input:hover,
+.workspace-leaf-content .search-input:focus {
+  font-size:var(--font-small);
+  padding:7px 10px;
+  height:28px;
+  border-radius:5px;
+  background:var(--background-primary);
+  border:1px solid var(--background-modifier-border);
+  transition:border-color 0.1s ease-in-out;
+}
+.workspace-leaf-content .search-input:hover {
+  border-color:var(--background-modifier-border-hover);
+  transition:border-color 0.1s ease-in-out;
+}
+.workspace-leaf-content .search-input:focus {
+  background:var(--background-primary);
+  border-color:var(--background-modifier-border-focus);
+  transition:all 0.1s ease-in-out;
+}
+.search-input-container input::placeholder {
+  color:var(--text-faint);
+  font-size:var(--font-small);
+}
+.workspace-split.mod-root .workspace-split.mod-vertical .workspace-leaf-content {
+  padding-right:0;
+}
+.workspace-split.mod-horizontal.mod-right-split {
+  width:0;
+}
+.workspace-split.mod-vertical > .workspace-leaf {
+  padding-right:1px;
+}
+.workspace-leaf-content[data-type=starred] .item-list {
+  padding-top:5px;
+}
+.workspace-split.mod-right-split .view-content {
+  padding:0 0 0 0;
+}
+
+
+/* --------------- */
+/* Nested items */
+
+.nav-folder-collapse-indicator,
+.tree-item-self .collapse-icon {
+  color:var(--background-modifier-border-hover);
+}
+.tree-item-self .collapse-icon {
+  padding-left:0;
+  width:15px;
+  margin-left:-15px;
+}
+.tree-item-self:hover .collapse-icon {
+  color:var(--text-accent-hover);
+}
+.tree-item {
+  padding-left:5px;
+}
+.tree-item-flair {
+  font-size:var(--font-smaller);
+  right:0;
+  background:transparent;
+  color:var(--text-faint);
+}
+.tree-item-flair-outer:after {
+  content:'';
+}
+.tree-item-self.is-clickable {
+  cursor:var(--cursor);
+}
+.tree-item-self.is-clickable:hover {
+  background:transparent;
+}
+.tree-item-self:hover .tree-item-flair {
+  background:transparent;
+  color:var(--text-muted);
+}
+.tree-item-children {
+  margin-left:5px;
+}
+
+/* --------------- */
+/* Preview mode  */
+
+.markdown-preview-view hr {
+  height:1px;
+  border-width:2px 0 0 0;
+}
+a[href*="obsidian://search"] {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='17' height='17' class='search'%3E%3Cpath fill='black' stroke='black' stroke-width='2' d='M42,6C23.2,6,8,21.2,8,40s15.2,34,34,34c7.4,0,14.3-2.4,19.9-6.4l26.3,26.3l5.6-5.6l-26-26.1c5.1-6,8.2-13.7,8.2-22.1 C76,21.2,60.8,6,42,6z M42,10c16.6,0,30,13.4,30,30S58.6,70,42,70S12,56.6,12,40S25.4,10,42,10z'%3E%3C/path%3E%3C/svg%3E");
+}
+.theme-dark a[href*="obsidian://search"] {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='17' height='17' class='search'%3E%3Cpath fill='white' stroke='white' stroke-width='2' d='M42,6C23.2,6,8,21.2,8,40s15.2,34,34,34c7.4,0,14.3-2.4,19.9-6.4l26.3,26.3l5.6-5.6l-26-26.1c5.1-6,8.2-13.7,8.2-22.1 C76,21.2,60.8,6,42,6z M42,10c16.6,0,30,13.4,30,30S58.6,70,42,70S12,56.6,12,40S25.4,10,42,10z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+
+.footnotes-list {
+  margin-block-start:-10px;
+  padding-inline-start:20px;
+  font-size:var(--font-small);
+}
+.footnotes-list p {
+  display:inline;
+  margin-block-end:0;
+  margin-block-start:0;
+}
+.footnote-ref a {
+  text-decoration:none;
+}
+.footnote-backref {
+  color:var(--text-faint);
+}
+
+.markdown-preview-view .image-embed img:not([width]),
+.markdown-preview-view audio,
+.markdown-preview-view video {
+  width:100%;
+}
+.markdown-preview-view .mod-highlighted {
+  transition:background-color 0.3s ease;
+  background-color:var(--text-selection);
+  color:inherit;
+}
+
+
+
+/* Tables */
+
+.markdown-preview-view th {
+  font-weight:var(--bold-weight);
+  text-align:left;
+  border-top:none;
+}
+.markdown-preview-view th:last-child,
+.markdown-preview-view td:last-child {
+  border-right:none;
+}
+.markdown-preview-view th:first-child,
+.markdown-preview-view td:first-child {
+  border-left:none;
+  padding-left:0;
+}
+.markdown-preview-view tr:last-child td {
+  border-bottom:none;
+}
+
+/* Bible Verses */
+/* Viewing them */
+.markdown-preview-view h6 {
+  position: relative;
+  left: -5%;
+  top: 28px;
+  line-height: 0px;
+  margin-top: -20px;
+  margin-right: 3px;
+  font-family: var(--font-family-preview);
+  font-weight: 500;
+  font-size: 10px;
+  font-weight: bold;
+  font-style: normal;
+  color: var(--text-faint);
+}
+
+
+
+/* Publish Headers (Links to this page / interactive graph) */
+.published-section-header {
+  color: var(--background-dark);
+}
+
+/* || IFRAMES */
+iframe {
+  display: block;
+  border-style: none;
+  margin: 0 auto;
+}
+
+/* || LINKS */
+.internal-link.is-unresolved {
+  opacity: 0.5;
+  color: var(--text-accent-unresolved);
+  /* text-decoration: underline;
+  text-decoration-color: var(--text-accent-unresolved);
+  text-decoration-thickness: 1px; */
+}
+
+.markdown-preview-view .internal-link {
+  text-decoration: none;
+}
+
+.markdown-preview-view .internal-link:hover:not(.internal-link.is-unresolved) {
+  color: var(--text-accent);
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  text-decoration-color: var(--text-accent-hover-rgba);
+  text-decoration-skip-ink: none;
+}
+
+a:hover {
+  color: var(--text-accent-hover);
+}
+
+.external-link {
+  color:var(--text-accent);
+  text-decoration:underline;
+}
+
+/* --------------- */
+/* Image zoom  */
+
+.view-content img {
+  max-width:100%;
+  cursor:zoom-in;}
+.view-content img:active {
+  cursor:zoom-out;
+  display:block;
+  z-index:100;
+  position:fixed;
+    max-height:calc(100% + 1px);
+    max-width:calc(100% - 20px);
+    height:calc(100% + 1px);
+    width:100%;
+    object-fit:contain;
+    margin:-0.5px auto 0;
+    text-align:center;
+    top:50%;
+    transform:translateY(-50%);
+    padding:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:var(--background-translucent);
+}
+
+/* || Graph */
+.graph-view.color-fill-unresolved {
+  opacity: 0.5;
+}
+/* .graph-view.color-fill {
+  color: var(--text-accent);
+} */
+.graph-view.color-fill:hover {
+  color: var(--text-accent-hover);
+}
+
+
+
+.published-container.has-graph .graph-view-outer {
+  padding: 10px;
+}
+
+
+/* || Code */
+.markdown-preview-view code,
+.cm-s-obsidian span.cm-inline-code {
+  border: 1px solid rgb(229 229 229);
+  background-color: var(--background-dark);
+  color: var(--background-dark-alt);
+  border-radius: 5px;
+}
+/* Rounded `codeblocks` (singe-tick) */
+/* set text and colour of codeblock */
+.cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
+    color: inherit;
+    background-color: #374151;
+    padding: 2px 4px;
+}
+
+/* give rounded left edge to codeblock formatting*/
+span.cm-formatting.cm-formatting-code.cm-inline-code{
+    border-radius: 4px 0px 0px 4px;
+    background-color: #374151;
+    color:inherit;
+    padding: 2px 4px;
+}
+
+/* give rounded right edge to codeblock formatting */
+span.cm-inline-code + span.cm-formatting.cm-formatting-code.cm-inline-code{
+    border-radius: 0px 4px 4px 0px;
+}
+
+/* ----------------------------------- */
+/* Fences and styled text blocks */
+/* ----------------------------------- */
+
+/* || Callouts from Vileplume
+used in a custom codefence */
+
+pre.language-co {
+border-radius: 10px;
+border: 1px solid rgba(255,255,255,0.03);
+padding: 10px 20px;
+position: relative;
+box-shadow: -10px -10px 30px rgba(255,255,255,0.05), 10px 10px 30px rgba(0,0,0,0.2);
+background-color: var(--background-primary-alt) !important;
+}
+
+code.language-co.is-loaded {
+  font-family: var(--text);
+  white-space: normal;
+}
+
+/* Site header */
+.page-header {
+  display: none !important;
+}
+
+/* Site bars */
+.site-body-left-column,
+.site-body-left-column:before {
+  background-color: var(--background-dark);
+  border-right: none !important;
+}
+
+.tree-item-inner {
+  color: var(--text-faint);
+}
+
+.tree-item-inner:hover,
+.tree-item-inner:active {
+  color: var(--text-accent-hover);
+}
+/* ----------------------------------- */
+/* || Epistemological status styling via Highlighting */
+.markdown-preview-view mark {
+    background-color: var(--background-primary);
+    color: var(--text-faint);
+    font-size: var(--font-small);
+    font-style: italic;
+}
+
+.markdown-preview-view mark .internal-link.internal-link.is-unresolved {
+  color: #a4a4a4
+}
+
+.markdown-preview-view mark .internal-link {
+  color: var(--text-faint);
+  font-style: normal;
+}
+
+.markdown-preview-view mark .internal-link:hover {
+  color: var(--text-faint);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--text-accent-hover-rgba);
+}
+
+
+
+.markdown-preview-view mark .internal-link[data-href^='Level of Certainty'] {
+      font-weight: 500;
+      font-style: normal;
+      color: var(--text-muted);
+
+}
+
+.markdown-preview-view mark .internal-link[data-href^='Level of Effort'] {
+      font-weight: 500;
+      font-style: normal;
+      color: var(--text-muted);
+
+}
+
+/* ----------------------------------- */
+/* Bible verse embeds */
+div.markdown-embed .markdown-preview-view h6 {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    margin: 0px;
+    display: none;
+  }
+
+.markdown-preview-view .markdown-embed-content p:first-child {
+    margin: 1px;
+    top: 10px;
+}
+
+div.markdown-embed-link:not([src*="#v^"]) {
+    visibility: hidden;
+}
+/* 
+For a fun quotemark:
+
+.markdown-preview-view .markdown-embed-content::before {
+    content: "\201C";
+    position: absolute;
+    font-size: 3em;
+    font-family: var(--font-header);
+    color: var(--text-faint);
+} */
+
+
+/* ----------------------------------- */
+
+/* Ribbon, focussed item in file tree */
+.nav-view-outer .tree-item-self.mod-active {
+  background-color: transparent;
+  color: var(--text-accent-hover) !important;
+}
+
+.site-body-right-column {
+  background-color: var(--background-secondary);
+}
+
+/* Search */
+.search-view-container .search-bar.has-no-results {
+    background-color: rgba(var(--background-modifier-error-rgb), 0.9);
+}
+
+/* Error */
+.search-view-container .search-bar.has-no-results {
+    background-color: rgba(var(--background-modifier-error-rgb), 0.2);
+    color: var(--interactive-normal);
+}
+
+/* Containers */
+.graph-view-container {
+  border: none;
+  box-shadow: none;
+  background-color: var(--background-primary);
+}
+.outline-view-outer .collapsible-item-self.mod-active {
+  background-color: var(--background-primary);
+}
+
+/* || Graph */
+.graph-view.color-fill-unresolved {
+  opacity: 0.5;
+}
+/* .graph-view.color-fill {
+  color: var(--text-accent);
+} */
+.graph-view.color-fill:hover {
+  color: var(--text-accent-hover);
+}
+
+/* Page Name */
+.site-body-left-column-site-name {
+  color: white;
+}
+
+/* Backlinks */
+.published-container .backlinks {
+ border: 1px solid var(--text-accent-hover);
+}
+
+/* Footer */
+.site-footer {
+    display: none;
+}
+
+
+/* ----------------------------------- */
+/* Hide irrelevant documents */
+/* ----------------------------------- */
+.tree-item-self:not([data-path^='Bible Study Kit']):not([data-path^='Scripture (WEB)']):not([data-path^='✌️ Welcome']):not([data-path^='✝️ Faith']):not([data-path^='🌱 About']):not([data-path^='💭 Interests']):not([data-path^='📚 Books']):not([data-path^='🗞 Blog']):not([data-path^='Sign up for my Newsletter! 📮']):not([data-path^='💞 Favourites']) {
+  display: none;
+}
+
+/* ----------------------------------- */
+/* Side logo */
+/* ----------------------------------- */
+.site-body-left-column-site-name {
+  text-align: center;
+  margin: 0 auto;
+}
+.site-body-left-column-site-name::before {
+    background: none;
+    display: block;
+    content: url(https://publish-01.obsidian.md/access/7468061a2fce94dfd507e531380e776b/garden-icon.svg);
+    width: 60%;
+    margin: 0 auto;
+}

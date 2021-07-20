@@ -4,7 +4,11 @@ The CSS for my Obsidian publish site: [joschuasgarden.com](https://joschuasgarde
 
 ![picture of my digital garden](https://github.com/selfire1/obsidian-publish-css/blob/main/site-overview.png?raw=true)
 
-**Noteworthy inspirations:**
+> You can help me keep creating tools like this by [buying me a coffee](https://www.buymeacoffee.com/joschua).
+
+<a href="https://www.buymeacoffee.com/joschua" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height= "48" width="173"></a>
+
+## Noteworthy inspirations:
 I like to [Steal from my heroes](https://joschuasgarden.com/Steal+from+your+heroes). I copied, changed and pasted a lot to come up with a style I cherish.
 * Themes:
     * This theme is built on [Minimal Obsidian 2.5.4](https://github.com/kepano/obsidian-minimal) by @kepano: 

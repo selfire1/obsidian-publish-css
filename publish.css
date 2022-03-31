@@ -343,7 +343,7 @@ span.cm-hashtag.cm-hashtag-end {
 
 input[type=checkbox] {
   -webkit-appearance:none;
-  appearance:none;
+  appearance:auto;
   border-radius:50%;
   border:1px solid var(--background-modifier-border-hover);
   padding:0;
